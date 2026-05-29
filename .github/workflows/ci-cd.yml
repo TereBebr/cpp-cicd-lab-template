@@ -22,8 +22,8 @@ jobs:
           restore-keys: ccache-${{ runner.os }}- 
       - name: Configure CMake 
         run: | 
-          cmake -B build -G Ninja \ 
-            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \ 
+          cmake -B build -G Ninja \
+            -DCMAKE_CXX_COMPILER_LAUNCHER=ccache \
             -DCMAKE_CXX_FLAGS="-Wall -Wextra" 
       - name: Build 
         run: cmake --build build 
